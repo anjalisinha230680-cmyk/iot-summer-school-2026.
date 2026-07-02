@@ -1,6 +1,8 @@
+int count = 0;
 void setup()
 {
   pinMode(13, OUTPUT);
+  Serial.begin(9600);
 }
 
 void loop()
@@ -9,4 +11,7 @@ void loop()
   delay(500);
   digitalWrite(13, LOW);
   delay(500); 
+  count++;
+  Serial.print("Blink count:");
+  Serial.println(count);
 }
