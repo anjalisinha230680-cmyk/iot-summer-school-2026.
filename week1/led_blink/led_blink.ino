@@ -1,4 +1,4 @@
-// Minor update
+// Bug fix
 /*
   Author: Anjali Sinha
   Date: 03-07-2026
