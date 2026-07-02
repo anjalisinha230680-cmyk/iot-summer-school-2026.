@@ -1,3 +1,9 @@
+/*
+  Author: Anjali Sinha
+  Date: 03-07-2026
+  Description: LED blink with serial
+  counter and potentiometer speed control.
+*/
 int count = 0;
 int sensorPin = AO;
 void setup()
