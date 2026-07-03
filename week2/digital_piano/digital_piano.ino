@@ -1,37 +1,30 @@
-// Digital Piano using Buzzer
-
-const int buzzer = 8;
-const int button1 = 2;
-const int button2 = 3;
-const int button3 = 4;
-const int button4 = 5;
-const int modeButton = 6;
-
-bool majorMode = true;
-
-void setup() {
-  pinMode(button1, INPUT_PULLUP);
-  pinMode(button2, INPUT_PULLUP);
-  pinMode(button3, INPUT_PULLUP);
-  pinMode(button4, INPUT_PULLUP);
-  pinMode(modeButton, INPUT_PULLUP);
-}
-
 void loop() {
 
-  if (digitalRead(button1) == LOW) {
-    tone(buzzer, 262);
+  bool b1 = digitalRead(button1) == LOW;
+  bool b2 = digitalRead(button2) == LOW;
+  bool b3 = digitalRead(button3) == LOW;
+  bool b4 = digitalRead(button4) == LOW;
+
+  int pressed = b1 + b2 + b3 + b4;
+
+  // If any two buttons are pressed together
+  if (pressed >= 2) {
+    tone(buzzer, 392);   // Sol
   }
-  else if (digitalRead(button2) == LOW) {
-    tone(buzzer, 294);
+  else if (b1) {
+    tone(buzzer, 262);   // Do
   }
-  else if (digitalRead(button3) == LOW) {
-    tone(buzzer, 330);
+  else if (b2) {
+    tone(buzzer, 294);   // Re
   }
-  else if (digitalRead(button4) == LOW) {
-    tone(buzzer, 349);
+  else if (b3) {
+    tone(buzzer, 330);   // Mi
+  }
+  else if (b4) {
+    tone(buzzer, 349);   // Fa
   }
   else {
     noTone(buzzer);
   }
 }
+   
