@@ -6,7 +6,7 @@
 # analogWrite()
   It can be used on any PWM pin and create PWM wave.
   Accepts values between 0 and 255.
-  Example: Controlling LED brightness or DC motor speed.
+  Example: Controlling LED brightness or DC  motor speed.
 
  # PWM
    Pulse Width Modulation, or PWM, is a technique for getting analog results with digital means 
