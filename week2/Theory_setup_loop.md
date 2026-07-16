@@ -11,4 +11,4 @@ Runs continuously after setup() and executes the main program repeatedly.
 
 # Non-blocking Alternative
  Use the  millis()  function instead of delay().
- millis() allows the Arduino to perform other tasks while keeping track of time, making sensor readings more responsive.
+ millis() allows the Arduino to perform other tasks while keeping track of time, making sensor readings more  responsive.
